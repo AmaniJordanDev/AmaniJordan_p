@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Amani Jordan — Freelance Frontend Developer, Coder & Digital Creator. Building websites, documenting my rise in tech, and creating a brand worth following." />
+  <meta name="keywords" content="Amani Jordan, Frontend Developer, Freelance Developer, Web Design, Digital Creator, TikTok, Tech Creator" />
+  <meta name="author" content="Amani Jordan" />
+  <meta property="og:title" content="Amani Jordan | Freelance Developer & Digital Creator" />
+  <meta property="og:description" content="Building websites. Documenting the journey. Rising in tech." />
+  <meta property="og:type" content="website" />
+  <title>Amani Jordan | Freelance Developer & Digital Creator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="logo-mark">AJ</span>
+        <span class="logo-text">Amani Jordan</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Work</a></li>
+        <li><a href="#creator" class="nav-link">Creator</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up" style="--d:0ms">
+        <span class="badge-dot"></span>
+        <span>Available for freelance projects</span>
+      </div>
+      <h1 class="hero-name reveal-up" style="--d:100ms">
+        Amani<br/><span class="name-accent">Jordan</span>
+      </h1>
+      <div class="hero-roles reveal-up" style="--d:200ms">
+        <span class="role-static">— </span>
+        <span class="role-cycle" id="roleCycle">Freelance Developer</span>
+      </div>
+      <p class="hero-sub reveal-up" style="--d:300ms">
+        Building premium websites. Coding in public.<br/>Documenting the rise from zero to elite in tech.
+      </p>
+      <div class="hero-ctas reveal-up" style="--d:400ms">
+        <a href="#contact" class="btn-primary">
+          <span>Hire Me</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#portfolio" class="btn-secondary">View My Work</a>
+        <a href="#creator" class="btn-ghost">Follow the Journey ↗</a>
+      </div>
+      <div class="hero-social reveal-up" style="--d:500ms">
+        <a href="https://www.tiktok.com/@amanijordan24" class="social-pill" aria-label="TikTok">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.56V6.78a4.85 4.85 0 01-1.07-.09z"/></svg>
+          TikTok
+        </a>
+        <a href="https://github.com/Amanijordan45" class="social-pill" aria-label="GitHub">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.instagram.com/amani_jordan45/" class="social-pill" aria-label="Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal-left">
+          <div class="about-img-wrap">
+            <div class="about-placeholder">
+              <img src="profile.png" alt="Amani Jordan" class="profile-photo" />
+              <div class="placeholder-ring ring-1"></div>
+              <div class="placeholder-ring ring-2"></div>
+              <div class="placeholder-ring ring-3"></div>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-num">15+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Passion</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">Ambition</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content reveal-right">
+          <div class="section-tag">About Me</div>
+          <h2 class="section-title">Not just a developer.<br/><em>A brand in motion.</em></h2>
+          <p class="about-text">My name is Amani Jordan — a self-driven frontend developer and digital creator who decided that learning to code wasn't enough. I'm building a career, a brand, and a movement.</p>
+          <p class="about-text">I started with a screen, a vision, and zero roadmap. What I found was a calling. I build websites that convert. I write code that performs. And I document every step of the journey so others know: this path is possible.</p>
+          <p class="about-text">My mission is simple — deliver world-class digital experiences for clients, and prove that a new generation of developers can be just as creative as they are technical.</p>
+          <div class="about-values">
+            <div class="value-item">
+              <span class="value-icon">⚡</span>
+              <div>
+                <strong>Fast Execution</strong>
+                <p>Ideas shipped with speed and precision.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">🎯</span>
+              <div>
+                <strong>Strategic Thinking</strong>
+                <p>Every design decision has a purpose.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">🔥</span>
+              <div>
+                <strong>Built in Public</strong>
+                <p>Transparent, authentic, always growing.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn-primary">Let's Build Together</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">What I Do</div>
+        <h2 class="section-title">Services built for<br/><em>real results</em></h2>
+        <p class="section-sub">Every service delivered with premium craft and a developer who genuinely cares about your outcome.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal-up" style="--d:0ms">
+          <div class="service-num">01</div>
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Frontend Development</h3>
+          <p>Pixel-perfect, responsive websites built with clean HTML, CSS, and JavaScript. Fast, accessible, and built to last.</p>
+          <span class="service-tag">Core Offer</span>
+        </div>
+        <div class="service-card reveal-up" style="--d:80ms">
+          <div class="service-num">02</div>
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3>Website Design</h3>
+          <p>Strategic UI/UX design that converts visitors into clients. Premium aesthetics with purpose-driven layouts.</p>
+          <span class="service-tag">High Demand</span>
+        </div>
+        <div class="service-card reveal-up" style="--d:160ms">
+          <div class="service-num">03</div>
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Freelance Projects</h3>
+          <p>End-to-end project delivery from brief to launch. I handle the technical so you can focus on growing.</p>
+          <span class="service-tag">Available Now</span>
+        </div>
+        <div class="service-card reveal-up" style="--d:240ms">
+          <div class="service-num">04</div>
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3>Personal Brand Sites</h3>
+          <p>Websites that capture who you are — built to position you as the authority in your space.</p>
+          <span class="service-tag">Specialty</span>
+        </div>
+        <div class="service-card reveal-up" style="--d:320ms">
+          <div class="service-num">05</div>
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Business Websites</h3>
+          <p>Professional business presence that builds instant credibility. Clean, fast, and built to convert.</p>
+          <span class="service-tag">Popular</span>
+        </div>
+        <div class="service-card service-card--cta reveal-up" style="--d:400ms">
+          <p class="cta-eyebrow">Ready to start?</p>
+          <h3>Let's talk about what you need.</h3>
+          <a href="https://wa.me/256726814113" class="btn-primary">Start a Project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">Portfolio</div>
+        <h2 class="section-title">Work that speaks<br/><em>for itself</em></h2>
+        <p class="section-sub">Projects built with purpose. Every line of code written with intention.</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="project-card project-card--featured reveal-up" style="--d:0ms">
+          <div class="project-visual" style="--accent:#a78bfa">
+            <div class="project-mockup">
+              <div class="mockup-bar"><span></span><span></span><span></span></div>
+              <div class="mockup-body">
+                <div class="mockup-hero"></div>
+                <div class="mockup-lines">
+                  <div class="ml" style="--w:75%"></div>
+                  <div class="ml" style="--w:55%"></div>
+                  <div class="ml" style="--w:88%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <h3 class="project-title">Brand Landing Page</h3>
+            <p class="project-desc">A high-conversion landing page — scroll animations, glassmorphism cards, and mobile-first layout that commands attention.</p>
+            <div class="project-links">
+              <a href="https://torigardenkitende.vercel.app/" class="proj-link">Live Demo →</a>
+              <a href="https://github.com/Amanijordan45/Tori-Garden-Kitende" class="proj-link proj-link--ghost">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal-up" style="--d:100ms">
+          <div class="project-visual" style="--accent:#38bdf8">
+            <div class="project-mockup">
+              <div class="mockup-bar"><span></span><span></span><span></span></div>
+              <div class="mockup-body">
+                <div class="mockup-hero" style="height:70px"></div>
+                <div class="mockup-lines">
+                  <div class="ml" style="--w:80%"></div>
+                  <div class="ml" style="--w:60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span>React</span><span>CSS</span></div>
+            <h3 class="project-title">Portfolio Template</h3>
+            <p class="project-desc">A reusable developer portfolio template — built for other creatives to own their brand online fast.</p>
+            <div class="project-links">
+              <a href="https://my-blog-website-ruddy.vercel.app/" class="proj-link">Live Demo →</a>
+              <a href="https://github.com/Amanijordan45/My-Blog_website" class="proj-link proj-link--ghost">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal-up" style="--d:200ms">
+          <div class="project-visual" style="--accent:#f59e0b">
+            <div class="project-mockup">
+              <div class="mockup-bar"><span></span><span></span><span></span></div>
+              <div class="mockup-body">
+                <div class="mockup-hero" style="height:70px"></div>
+                <div class="mockup-lines">
+                  <div class="ml" style="--w:90%"></div>
+                  <div class="ml" style="--w:50%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span>HTML</span><span>CSS</span></div>
+            <h3 class="project-title">Business Website</h3>
+            <p class="project-desc">Clean, professional site for a local brand — designed to build trust from the first scroll.</p>
+            <div class="project-links">
+              <a href="https://2sharp-designer.vercel.app/" class="proj-link">Live Demo →</a>
+              <a href="https://github.com/Amanijordan45/2sharp-Designer" class="proj-link proj-link--ghost">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal-up" style="--d:300ms">
+          <div class="project-visual" style="--accent:#ec4899">
+            <div class="project-mockup">
+              <div class="mockup-bar"><span></span><span></span><span></span></div>
+              <div class="mockup-body">
+                <div class="mockup-hero" style="height:70px"></div>
+                <div class="mockup-lines">
+                  <div class="ml" style="--w:65%"></div>
+                  <div class="ml" style="--w:80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span>JavaScript</span><span>CSS</span><span>HTML</span></div>
+            <h3 class="project-title">Business Website Redesign</h3>
+            <p class="project-desc">Modern, responsive website solutions for real businesses — polished UI, smooth animations, and conversion-focused design.</p>
+            <div class="project-links">
+              <a href="https://fix-worker.vercel.app/" class="proj-link">Live Demo →</a>
+              <a href="https://github.com/Amanijordan45/FixWorker" class="proj-link proj-link--ghost">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-footer reveal-up">
+        <p>See more on GitHub</p>
+        <a href="https://github.com/Amanijordan45" class="btn-secondary">View All Projects →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT CREATOR -->
+  <section class="creator section" id="creator">
+    <div class="creator-bg">
+      <div class="orb orb-4"></div>
+      <div class="orb orb-5"></div>
+    </div>
+    <div class="container">
+      <div class="creator-grid">
+        <div class="creator-content reveal-left">
+          <div class="section-tag">Content Creator</div>
+          <h2 class="section-title">Building in public.<br/><em>Rising out loud.</em></h2>
+          <p class="creator-text">I don't just code — I document. Every project, every lesson, every late night, every win. I'm building a brand that proves what consistency and skill can do when you bet on yourself.</p>
+          <p class="creator-text">On TikTok I share the raw, real story of a developer leveling up in real time — the code, the process, the mindset, and the growth.</p>
+          <div class="creator-pillars">
+            <div class="pillar">
+              <span class="pillar-icon">📱</span>
+              <div>
+                <strong>TikTok Journey</strong>
+                <p>Behind-the-scenes of building a dev career from scratch.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <span class="pillar-icon">🎬</span>
+              <div>
+                <strong>Content That Educates</strong>
+                <p>Web dev tips, project breakdowns, and tech career insights.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <span class="pillar-icon">🚀</span>
+              <div>
+                <strong>The Rise</strong>
+                <p>Documenting the full journey — from beginner to elite.</p>
+              </div>
+            </div>
+          </div>
+          <div class="creator-ctas">
+            <a href="https://www.tiktok.com/@amanijordan24" class="btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.56V6.78a4.85 4.85 0 01-1.07-.09z"/></svg>
+              Follow on TikTok
+            </a>
+            <a href="https://www.instagram.com/amani_jordan45/?hl=en" class="btn-ghost">Instagram ↗</a>
+          </div>
+        </div>
+        <div class="creator-visual reveal-right">
+          <div class="tiktok-card">
+            <div class="tiktok-header">
+              <div class="tiktok-avatar">AJ</div>
+              <div class="tiktok-meta">
+                <strong>@amanijordan24</strong>
+                <span>Frontend Dev & Creator</span>
+              </div>
+              <div class="tiktok-follow-badge">Follow</div>
+            </div>
+            <div class="tiktok-feed">
+              <div class="feed-item">
+                <div class="feed-thumb" style="--c:#a78bfa"><span>🖥️</span></div>
+                <div class="feed-info">
+                  <p>How I built this portfolio in one day</p>
+                  <span>12.4K views</span>
+                </div>
+              </div>
+              <div class="feed-item">
+                <div class="feed-thumb" style="--c:#38bdf8"><span>💻</span></div>
+                <div class="feed-info">
+                  <p>CSS tricks that changed how I code</p>
+                  <span>8.9K views</span>
+                </div>
+              </div>
+              <div class="feed-item">
+                <div class="feed-thumb" style="--c:#f59e0b"><span>🔥</span></div>
+                <div class="feed-info">
+                  <p>From zero experience to freelancing</p>
+                  <span>21.3K views</span>
+                </div>
+              </div>
+              <div class="feed-item">
+                <div class="feed-thumb" style="--c:#ec4899"><span>🚀</span></div>
+                <div class="feed-info">
+                  <p>My first paid project — full breakdown</p>
+                  <span>15.7K views</span>
+                </div>
+              </div>
+            </div>
+            <div class="tiktok-footer">
+              <a href="https://www.tiktok.com/@amanijordan24" class="btn-primary" style="width:100%;justify-content:center;display:flex">Follow the Journey</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills-section section" id="skills">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">Skills</div>
+        <h2 class="section-title">The tech stack behind<br/><em>the craft</em></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal-up" style="--d:0ms">
+          <div class="skill-icon html">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+          </div>
+          <h3>HTML5</h3>
+          <p>Semantic, accessible, SEO-ready markup.</p>
+          <div class="skill-bar"><div class="skill-fill" style="--p:90%"></div></div>
+          <span class="skill-pct">90%</span>
+        </div>
+        <div class="skill-card reveal-up" style="--d:80ms">
+          <div class="skill-icon css">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.413z"/></svg>
+          </div>
+          <h3>CSS3</h3>
+          <p>Animations, layouts, glassmorphism, precision styling.</p>
+          <div class="skill-bar"><div class="skill-fill" style="--p:88%"></div></div>
+          <span class="skill-pct">88%</span>
+        </div>
+        <div class="skill-card reveal-up" style="--d:160ms">
+          <div class="skill-icon js">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+          </div>
+          <h3>JavaScript</h3>
+          <p>Dynamic interactions, DOM mastery, clean logic.</p>
+          <div class="skill-bar"><div class="skill-fill" style="--p:82%"></div></div>
+          <span class="skill-pct">82%</span>
+        </div>
+        <div class="skill-card reveal-up" style="--d:240ms">
+          <div class="skill-icon react">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.29zM9.09 13.928c.166.34.338.661.515.98-.185.28-.37.553-.555.81-1.006-1.208-1.676-2.38-1.937-3.345.76.194 1.58.346 2.433.42-.15.38-.305.752-.456 1.135zm1.576 2.72c-.25-.477-.474-.974-.697-1.48.23-.04.467-.077.706-.108.239-.03.481-.056.725-.075.426.608.852 1.16 1.28 1.638-.888.245-1.752.42-2.014.025z"/></svg>
+          </div>
+          <h3>React</h3>
+          <p>Component-based UIs with hooks and modern patterns.</p>
+          <div class="skill-bar"><div class="skill-fill" style="--p:72%"></div></div>
+          <span class="skill-pct">72%</span>
+        </div>
+        <div class="skill-card reveal-up" style="--d:320ms">
+          <div class="skill-icon github">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </div>
+          <h3>GitHub</h3>
+          <p>Version control, open source, collaborative coding.</p>
+          <div class="skill-bar"><div class="skill-fill" style="--p:85%"></div></div>
+          <span class="skill-pct">85%</span>
+        </div>
+        <div class="skill-card reveal-up" style="--d:400ms">
+          <div class="skill-icon uiux">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="30" height="30"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3>UI/UX Mindset</h3>
+          <p>Designing with the user in mind, every single time.</p>
+          <div class="skill-bar"><div class="skill-fill" style="--p:80%"></div></div>
+          <span class="skill-pct">80%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">Trust</div>
+        <h2 class="section-title">What clients &<br/><em>collaborators say</em></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal-up" style="--d:0ms">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Amani delivered a website that was beyond what I imagined. Fast, polished, and actually understood my brand. Will work with him again."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">SK</div>
+            <div>
+              <strong>Sarah K.</strong>
+              <span>Personal Brand Client</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-up" style="--d:100ms">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Working with Amani felt like working with someone who gets it — the design, the strategy, the attention to detail. He thinks like a brand, not just a developer."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <strong>Marcus R.</strong>
+              <span>Business Owner</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-up" style="--d:200ms">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Clean code, great communication, delivered on time. Amani is the kind of developer you want on your team — professional and genuinely skilled."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">JL</div>
+            <div>
+              <strong>Jordan L.</strong>
+              <span>Startup Founder</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="trust-bar reveal-up">
+        <div class="trust-item">
+          <strong>15+</strong>
+          <span>Projects Completed</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <strong>100%</strong>
+          <span>Client Satisfaction</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <strong>Fast</strong>
+          <span>Turnaround Time</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <strong>Open</strong>
+          <span>For New Projects</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="section-tag">Contact</div>
+          <h2 class="section-title">Let's build something<br/><em>extraordinary.</em></h2>
+          <p class="contact-sub">Whether you need a website, want to collaborate, or just want to connect — I'm here. Let's talk.</p>
+          <div class="contact-links">
+            <a href="mailto:alainbuhashe87@gmail.com" class="contact-link">
+              <div class="contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <span>hello@amanijordan.com</span>
+              </div>
+            </a>
+            <a href="https://wa.me/256726814113" class="contact-link">
+              <div class="contact-icon" style="--ic:#25d366">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              </div>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>Message me directly</span>
+              </div>
+            </a>
+            <a href="https://www.tiktok.com/@amanijordan24" class="contact-link">
+              <div class="contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.56V6.78a4.85 4.85 0 01-1.07-.09z"/></svg>
+              </div>
+              <div>
+                <strong>TikTok</strong>
+                <span>@amanijordan24</span>
+              </div>
+            </a>
+            <a href="https://github.com/Amanijordan45" class="contact-link">
+              <div class="contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </div>
+              <div>
+                <strong>GitHub</strong>
+                <span>github.com/amanijordan45</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="What's your name?" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="project">Project Type</label>
+              <select id="project" name="project">
+                <option value="">Select a service...</option>
+                <option>Frontend Development</option>
+                <option>Website Design</option>
+                <option>Personal Brand Website</option>
+                <option>Business Website</option>
+                <option>Other / Collaboration</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell me about your project</label>
+              <textarea id="message" name="message" rows="5" placeholder="Share what you're building..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary form-submit" id="submitBtn">
+              <span id="submitText">Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Message sent! I'll be in touch soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-mark">AJ</span>
+          <div>
+            <strong>Amani Jordan</strong>
+            <p>Freelance Developer. Digital Creator.<br/>Building the future one line at a time.</p>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-nav-col">
+            <strong>Navigate</strong>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Work</a>
+            <a href="#creator">Creator</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-nav-col">
+            <strong>Connect</strong>
+            <a href="https://www.tiktok.com/@amanijordan24">TikTok</a>
+            <a href="https://www.instagram.com/amani_jordan45/?hl=en">Instagram</a>
+            <a href="https://github.com/Amanijordan45">GitHub</a>
+            <a href="mailto:alainbuhashe87@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-statement">Built with intention. Coded with craft. <span class="accent">— Amani Jordan</span></p>
+        <p class="footer-copy">© 2026 Amani Jordan. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
